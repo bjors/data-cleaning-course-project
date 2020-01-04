@@ -24,4 +24,4 @@ The training + test data is then merged so we have 3 tables containing all data:
 4. The feature names is cleaned up a bit to not contain "-" or "()". They are also converted to lower case. This is also where we merge together the three tables into a single data set containing subject, activity and mean/std-measurements
 
 5. Now we can create the tidy data set with one observation for each activity and subject. The reshape2 library is required here for the melt function
-The final data is stored in memory as **tidyData** and also writte to disk as "tidy_data.csv"
+The final data is stored in memory as **tidyData** and also written to disk as "tidy_data.csv" and "tidy_data.txt"
