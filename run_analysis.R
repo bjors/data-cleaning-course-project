@@ -69,3 +69,8 @@ colnames(testData) <- c("subject", "activity", featureLabels)
 # ------------------------------------------------------------------------
 melted <- melt(testData, id = c("subject", "activity"))
 tidyData <- dcast(melted, subject + activity ~ variable, mean)
+
+
+# 6. Write tidy data to disk
+write.csv(tidyData, file="tidy_data.csv")
+write.table(tidyData, file="tidy_data.txt", row.name=FALSE)
